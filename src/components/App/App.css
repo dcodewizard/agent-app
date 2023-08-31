@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo:400');
+
+html {
+  font-size: 87.5%;
+}
+
+body {
+  background: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000000;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.488rem;
+}
+
+h2 {
+  font-size: 2.074rem;
+}
+
+h3 {
+  font-size: 1.728rem;
+}
+
+h4 {
+  font-size: 1.44rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+small,
+.text_small {
+  font-size: 0.833rem;
+}
+
+.agents {
+  display: flex;
+  justify-content: center;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  max-height: 90%;
+  overflow-y: auto;
+  background-color: white;
+  padding: 20px;
+  animation: fade-in 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  position: relative;
+}
+
+.searchBar {
+  justify-content: space-between;
+  padding: 0px 20px 20px 20px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.joinButton {
+  width: 180px;
+  font-size: 18px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.row-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  grid-gap: 20px;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.heading {
+  text-align: center;
+  padding: 20px 20px 0px 20px;
+}
+
+.error-message {
+  color: red;
+  font-size: small;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+.loader {
+  display: flex;
+  position: absolute;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  backdrop-filter: blur(1px);
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+}
+
+.header {
+  padding: 15px;
+}
+
+.header span {
+  font-weight: bolder;
+}
+
+.table-header th {
+  font-weight: bold;
+  font-size: medium;
+}
+
+.review-row {
+  width: 100%;
+  margin: auto;
+}
+
+.review-row .card {
+  margin: 5px 0px 5px 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+.avatar {
+  padding: 10px;
+}
+
+.card h4 {
+  margin: 0px;
+}
+
+.card-body {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.agent-info {
+  min-width: 100%;
+}
